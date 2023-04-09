@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB63350029E0469B00F45136 /* BoardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6334FF29E0469B00F45136 /* BoardGameController.swift */; };
+		EB63350429E0481300F45136 /* FlippableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350329E0481300F45136 /* FlippableViewProtocol.swift */; };
+		EB63350929E049C300F45136 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350829E049C300F45136 /* CardModel.swift */; };
+		EB63350B29E04B5100F45136 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350A29E04B5100F45136 /* Game.swift */; };
 		EBFDE75929DEBF780041F2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */; };
 		EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */; };
-		EBFDE75D29DEBF780041F2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75C29DEBF780041F2E5 /* ViewController.swift */; };
-		EBFDE76029DEBF780041F2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFDE75E29DEBF780041F2E5 /* Main.storyboard */; };
 		EBFDE76229DEBF7A0041F2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFDE76129DEBF7A0041F2E5 /* Assets.xcassets */; };
-		EBFDE76529DEBF7A0041F2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBFDE76329DEBF7A0041F2E5 /* LaunchScreen.storyboard */; };
+		EBFDE77129DEC3840041F2E5 /* ShapeLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77029DEC3840041F2E5 /* ShapeLayerProtocol.swift */; };
+		EBFDE77329DEC3C90041F2E5 /* CircleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77229DEC3C90041F2E5 /* CircleShape.swift */; };
+		EBFDE77529DEC72D0041F2E5 /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77429DEC72D0041F2E5 /* SquareShape.swift */; };
+		EBFDE77829DEC93D0041F2E5 /* CrossShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77729DEC93D0041F2E5 /* CrossShape.swift */; };
+		EBFDE77A29DECA230041F2E5 /* FillShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77929DECA230041F2E5 /* FillShape.swift */; };
+		EBFDE77D29DECAE70041F2E5 /* BackSideCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77C29DECAE70041F2E5 /* BackSideCircle.swift */; };
+		EBFDE78029DECD020041F2E5 /* BackSideLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE77F29DECD020041F2E5 /* BackSideLine.swift */; };
+		EBFDE78229DECF800041F2E5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE78129DECF800041F2E5 /* CardView.swift */; };
+		EBFFA1FF29E1788A006AEBC5 /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFFA1FE29E1788A006AEBC5 /* CardViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB6334FF29E0469B00F45136 /* BoardGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameController.swift; sourceTree = "<group>"; };
+		EB63350329E0481300F45136 /* FlippableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableViewProtocol.swift; sourceTree = "<group>"; };
+		EB63350829E049C300F45136 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		EB63350A29E04B5100F45136 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EBFDE75529DEBF780041F2E5 /* CustomCardLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCardLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBFDE75C29DEBF780041F2E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBFDE75F29DEBF780041F2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBFDE76129DEBF7A0041F2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EBFDE76429DEBF7A0041F2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBFDE76629DEBF7A0041F2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBFDE77029DEC3840041F2E5 /* ShapeLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerProtocol.swift; sourceTree = "<group>"; };
+		EBFDE77229DEC3C90041F2E5 /* CircleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShape.swift; sourceTree = "<group>"; };
+		EBFDE77429DEC72D0041F2E5 /* SquareShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
+		EBFDE77729DEC93D0041F2E5 /* CrossShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossShape.swift; sourceTree = "<group>"; };
+		EBFDE77929DECA230041F2E5 /* FillShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillShape.swift; sourceTree = "<group>"; };
+		EBFDE77C29DECAE70041F2E5 /* BackSideCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSideCircle.swift; sourceTree = "<group>"; };
+		EBFDE77F29DECD020041F2E5 /* BackSideLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSideLine.swift; sourceTree = "<group>"; };
+		EBFDE78129DECF800041F2E5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EBFFA1FE29E1788A006AEBC5 /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB6334FE29E0465300F45136 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB6334FF29E0469B00F45136 /* BoardGameController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB63350229E0479700F45136 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBFDE77629DEC7410041F2E5 /* FigureShape */,
+				EBFDE77E29DECAF90041F2E5 /* BackSide */,
+				EBFDE77B29DECACD0041F2E5 /* ProtocolShape */,
+				EBFDE78129DECF800041F2E5 /* CardView.swift */,
+				EB63350329E0481300F45136 /* FlippableViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB63350729E0487D00F45136 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB63350829E049C300F45136 /* CardModel.swift */,
+				EB63350A29E04B5100F45136 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EBFDE74C29DEBF780041F2E5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +107,50 @@
 			children = (
 				EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */,
 				EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */,
-				EBFDE75C29DEBF780041F2E5 /* ViewController.swift */,
-				EBFDE75E29DEBF780041F2E5 /* Main.storyboard */,
+				EBFFA1FD29E17872006AEBC5 /* Helpers */,
+				EB63350729E0487D00F45136 /* Model */,
+				EB6334FE29E0465300F45136 /* Controller */,
+				EB63350229E0479700F45136 /* View */,
 				EBFDE76129DEBF7A0041F2E5 /* Assets.xcassets */,
-				EBFDE76329DEBF7A0041F2E5 /* LaunchScreen.storyboard */,
 				EBFDE76629DEBF7A0041F2E5 /* Info.plist */,
 			);
 			path = CustomCardLayer;
+			sourceTree = "<group>";
+		};
+		EBFDE77629DEC7410041F2E5 /* FigureShape */ = {
+			isa = PBXGroup;
+			children = (
+				EBFDE77229DEC3C90041F2E5 /* CircleShape.swift */,
+				EBFDE77429DEC72D0041F2E5 /* SquareShape.swift */,
+				EBFDE77729DEC93D0041F2E5 /* CrossShape.swift */,
+				EBFDE77929DECA230041F2E5 /* FillShape.swift */,
+			);
+			path = FigureShape;
+			sourceTree = "<group>";
+		};
+		EBFDE77B29DECACD0041F2E5 /* ProtocolShape */ = {
+			isa = PBXGroup;
+			children = (
+				EBFDE77029DEC3840041F2E5 /* ShapeLayerProtocol.swift */,
+			);
+			path = ProtocolShape;
+			sourceTree = "<group>";
+		};
+		EBFDE77E29DECAF90041F2E5 /* BackSide */ = {
+			isa = PBXGroup;
+			children = (
+				EBFDE77C29DECAE70041F2E5 /* BackSideCircle.swift */,
+				EBFDE77F29DECD020041F2E5 /* BackSideLine.swift */,
+			);
+			path = BackSide;
+			sourceTree = "<group>";
+		};
+		EBFFA1FD29E17872006AEBC5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EBFFA1FE29E1788A006AEBC5 /* CardViewFactory.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFDE76529DEBF7A0041F2E5 /* LaunchScreen.storyboard in Resources */,
 				EBFDE76229DEBF7A0041F2E5 /* Assets.xcassets in Resources */,
-				EBFDE76029DEBF780041F2E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +222,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFDE75D29DEBF780041F2E5 /* ViewController.swift in Sources */,
 				EBFDE75929DEBF780041F2E5 /* AppDelegate.swift in Sources */,
+				EBFDE77A29DECA230041F2E5 /* FillShape.swift in Sources */,
+				EBFDE77529DEC72D0041F2E5 /* SquareShape.swift in Sources */,
 				EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */,
+				EBFDE77129DEC3840041F2E5 /* ShapeLayerProtocol.swift in Sources */,
+				EB63350929E049C300F45136 /* CardModel.swift in Sources */,
+				EBFFA1FF29E1788A006AEBC5 /* CardViewFactory.swift in Sources */,
+				EB63350029E0469B00F45136 /* BoardGameController.swift in Sources */,
+				EBFDE77D29DECAE70041F2E5 /* BackSideCircle.swift in Sources */,
+				EBFDE77829DEC93D0041F2E5 /* CrossShape.swift in Sources */,
+				EB63350B29E04B5100F45136 /* Game.swift in Sources */,
+				EBFDE77329DEC3C90041F2E5 /* CircleShape.swift in Sources */,
+				EBFDE78229DECF800041F2E5 /* CardView.swift in Sources */,
+				EB63350429E0481300F45136 /* FlippableViewProtocol.swift in Sources */,
+				EBFDE78029DECD020041F2E5 /* BackSideLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EBFDE75E29DEBF780041F2E5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBFDE75F29DEBF780041F2E5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EBFDE76329DEBF7A0041F2E5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBFDE76429DEBF7A0041F2E5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EBFDE76729DEBF7A0041F2E5 /* Debug */ = {
@@ -292,7 +369,7 @@
 				INFOPLIST_FILE = CustomCardLayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +397,7 @@
 				INFOPLIST_FILE = CustomCardLayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
