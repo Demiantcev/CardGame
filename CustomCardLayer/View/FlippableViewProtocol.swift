@@ -5,7 +5,6 @@
 //  Created by Кирилл Демьянцев on 07.04.2023.
 //
 
-import Foundation
 import UIKit
 
 protocol FlippableView: UIView {

@@ -12,6 +12,7 @@ enum CardType: CaseIterable {
     case cross
     case square
     case fill
+    case unfilled
 }
 
 enum CardColor: CaseIterable {

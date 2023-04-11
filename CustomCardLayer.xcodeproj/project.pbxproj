@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB328E9229E57C25001BCA0B /* UnfilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB328E9129E57C25001BCA0B /* UnfilledCircle.swift */; };
 		EB63350029E0469B00F45136 /* BoardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6334FF29E0469B00F45136 /* BoardGameController.swift */; };
 		EB63350429E0481300F45136 /* FlippableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350329E0481300F45136 /* FlippableViewProtocol.swift */; };
 		EB63350929E049C300F45136 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350829E049C300F45136 /* CardModel.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB328E9129E57C25001BCA0B /* UnfilledCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfilledCircle.swift; sourceTree = "<group>"; };
 		EB6334FF29E0469B00F45136 /* BoardGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameController.swift; sourceTree = "<group>"; };
 		EB63350329E0481300F45136 /* FlippableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableViewProtocol.swift; sourceTree = "<group>"; };
 		EB63350829E049C300F45136 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EBFDE77229DEC3C90041F2E5 /* CircleShape.swift */,
+				EB328E9129E57C25001BCA0B /* UnfilledCircle.swift */,
 				EBFDE77429DEC72D0041F2E5 /* SquareShape.swift */,
 				EBFDE77729DEC93D0041F2E5 /* CrossShape.swift */,
 				EBFDE77929DECA230041F2E5 /* FillShape.swift */,
@@ -226,6 +229,7 @@
 				EBFDE77A29DECA230041F2E5 /* FillShape.swift in Sources */,
 				EBFDE77529DEC72D0041F2E5 /* SquareShape.swift in Sources */,
 				EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */,
+				EB328E9229E57C25001BCA0B /* UnfilledCircle.swift in Sources */,
 				EBFDE77129DEC3840041F2E5 /* ShapeLayerProtocol.swift in Sources */,
 				EB63350929E049C300F45136 /* CardModel.swift in Sources */,
 				EBFFA1FF29E1788A006AEBC5 /* CardViewFactory.swift in Sources */,

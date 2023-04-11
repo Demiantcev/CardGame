@@ -38,6 +38,7 @@ class BoardGameController: UIViewController {
         view.layer.cornerRadius = 5
         view.backgroundColor = #colorLiteral(red: 0.7059900165, green: 0.9093973041, blue: 0.5270702243, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
+        
         return view
     }()
     
@@ -55,9 +56,12 @@ class BoardGameController: UIViewController {
         super.loadView()
         let view = UIView()
         view.backgroundColor = .white
+
         self.view = view
         
         setupConstraint()
+        view.addSubview(boardGameView)
+        
     }
     
     override func viewDidLoad() {
@@ -100,7 +104,6 @@ class BoardGameController: UIViewController {
                             self.flippedCards.remove(at: cardIndex)
                         }
                     }
-                    
                     if self.flippedCards.count == 2 {
                         let firstCard = game.cards[self.flippedCards.first!.tag]
                         let secondCard = game.cards[self.flippedCards.last!.tag]
@@ -161,3 +164,4 @@ class BoardGameController: UIViewController {
         ])
     }
 }
+

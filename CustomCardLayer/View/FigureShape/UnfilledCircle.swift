@@ -1,14 +1,15 @@
 //
-//  CircleShape.swift
+//  UnfilledCircle.swift
 //  CustomCardLayer
 //
-//  Created by Кирилл Демьянцев on 06.04.2023.
+//  Created by Кирилл Демьянцев on 11.04.2023.
 //
 
+import UIKit
 import QuartzCore
 import UIKit
 
-class CircleShape: CAShapeLayer, ShapeLayerProtocol {
+class UnfilledCircle: CAShapeLayer, ShapeLayerProtocol {
     required init(size: CGSize, fillColor: CGColor) {
         super.init()
         
@@ -23,7 +24,8 @@ class CircleShape: CAShapeLayer, ShapeLayerProtocol {
         path.close()
         
         self.path = path.cgPath
-        self.fillColor = fillColor
+        self.fillColor = nil
+        self.strokeColor = fillColor
     }
     
     required init?(coder: NSCoder) {
