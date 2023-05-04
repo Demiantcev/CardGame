@@ -33,6 +33,31 @@ class BoardGameController: UIViewController {
         placeCardsOnBoard(cards)
     }
     
+    lazy var flippedCardButton: UIButton = {
+       var button = UIButton()
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .medium, scale: .large)
+        let largeBoldDoc = UIImage(systemName: "arrow.up.arrow.down.circle.fill", withConfiguration: largeConfig)
+        button.setImage(largeBoldDoc, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(allFlipCard), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func allFlipCard(_ sender: UIButton) {
+        
+        for card in cardsViews {
+            let cards = (card as! FlippableView)
+            
+            UIView.transition(with: cards, duration: 0.5, options: [.transitionFlipFromTop]) {
+                if cards.isFlipped == false {
+                    cards.isFlipped = true
+                } else {
+                    cards.isFlipped = false
+                }
+            }
+        }
+    }
+    
     lazy var boardGameView: UIView = {
         var view = UIView()
         view.layer.cornerRadius = 5
@@ -149,6 +174,7 @@ class BoardGameController: UIViewController {
         
         self.view.addSubview(startButton)
         self.view.addSubview(boardGameView)
+        self.view.addSubview(flippedCardButton)
         
         NSLayoutConstraint.activate([
             
@@ -160,7 +186,10 @@ class BoardGameController: UIViewController {
             boardGameView.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 10),
             boardGameView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             boardGameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            boardGameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+            boardGameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
+            flippedCardButton.centerYAnchor.constraint(equalTo: startButton.centerYAnchor),
+            flippedCardButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
         ])
     }
 }
