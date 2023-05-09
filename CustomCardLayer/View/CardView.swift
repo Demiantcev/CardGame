@@ -53,82 +53,75 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-                        if self.frame.origin == startTouchPoint {
-                            flip()
-                        }
-        
-        
-//        if self.frame.intersects(dd.boardGameView.frame) {
-//                    UIView.animate(withDuration: 0.5) {
-//                        self.frame.origin = self.startTouchPoint
-//                    }
-//                }
-            }
-        
-        override func draw(_ rect: CGRect) {
-            
-            backSideView.removeFromSuperview()
-            frontSideView.removeFromSuperview()
-            
-            if isFlipped {
-                self.addSubview(backSideView)
-                self.addSubview(frontSideView)
-            } else {
-                self.addSubview(frontSideView)
-                self.addSubview(backSideView)
-            }
-        }
-        
-        func flip() {
-            let fromView = isFlipped ? frontSideView : backSideView
-            let toView = isFlipped ? backSideView : frontSideView
-            
-            UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromTop]) { _ in
-                self.flipCompletionHandler?(self)
-            }
-            isFlipped.toggle()
-        }
-        
-        private func getFrontSideView() -> UIView {
-            let view = UIView(frame: self.bounds)
-            view.backgroundColor = .white
-            view.layer.masksToBounds = true
-            view.layer.cornerRadius = CGFloat(cornerRadius)
-            
-            let shapeView = UIView(frame: CGRect(x: margin, y: margin,
-                                                 width: Int(self.bounds.width) - margin * 2,
-                                                 height: Int(self.bounds.height) - margin * 2))
-            view.addSubview(shapeView)
-            
-            let shapeLayer = ShapeType(size: shapeView.frame.size, fillColor: color.cgColor)
-            shapeView.layer.addSublayer(shapeLayer)
-            
-            return view
-        }
-        
-        private func getBackSideView() -> UIView {
-            let view = UIView(frame: self.bounds)
-            view.backgroundColor = .white
-            view.layer.masksToBounds = true
-            view.layer.cornerRadius = CGFloat(cornerRadius)
-            
-            switch ["circle", "line"].randomElement()! {
-            case "circle":
-                let layer = BackSideCircle(size: self.bounds.size, fillColor: UIColor.black.cgColor)
-                view.layer.addSublayer(layer)
-            case "line":
-                let layer = BackSideLine(size: self.bounds.size, fillColor: UIColor.black.cgColor)
-                view.layer.addSublayer(layer)
-            default:
-                break
-            }
-            return view
-        }
-        
-        private func setupBorders() {
-            self.clipsToBounds = true
-            self.layer.cornerRadius = CGFloat(cornerRadius)
-            self.layer.borderWidth = 2
-            self.layer.borderColor = UIColor.black.cgColor
+        if self.frame.origin == startTouchPoint {
+            flip()
         }
     }
+    
+    override func draw(_ rect: CGRect) {
+        
+        backSideView.removeFromSuperview()
+        frontSideView.removeFromSuperview()
+        
+        if isFlipped {
+            self.addSubview(backSideView)
+            self.addSubview(frontSideView)
+        } else {
+            self.addSubview(frontSideView)
+            self.addSubview(backSideView)
+        }
+    }
+    
+    func flip() {
+        let fromView = isFlipped ? frontSideView : backSideView
+        let toView = isFlipped ? backSideView : frontSideView
+        
+        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromTop]) { _ in
+            self.flipCompletionHandler?(self)
+        }
+        isFlipped.toggle()
+    }
+    
+    private func getFrontSideView() -> UIView {
+        let view = UIView(frame: self.bounds)
+        view.backgroundColor = .white
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = CGFloat(cornerRadius)
+        
+        let shapeView = UIView(frame: CGRect(x: margin, y: margin,
+                                             width: Int(self.bounds.width) - margin * 2,
+                                             height: Int(self.bounds.height) - margin * 2))
+        view.addSubview(shapeView)
+        
+        let shapeLayer = ShapeType(size: shapeView.frame.size, fillColor: color.cgColor)
+        shapeView.layer.addSublayer(shapeLayer)
+        
+        return view
+    }
+    
+    private func getBackSideView() -> UIView {
+        let view = UIView(frame: self.bounds)
+        view.backgroundColor = .white
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = CGFloat(cornerRadius)
+        
+        switch ["circle", "line"].randomElement()! {
+        case "circle":
+            let layer = BackSideCircle(size: self.bounds.size, fillColor: UIColor.black.cgColor)
+            view.layer.addSublayer(layer)
+        case "line":
+            let layer = BackSideLine(size: self.bounds.size, fillColor: UIColor.black.cgColor)
+            view.layer.addSublayer(layer)
+        default:
+            break
+        }
+        return view
+    }
+    
+    private func setupBorders() {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = CGFloat(cornerRadius)
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+}

@@ -38,6 +38,7 @@ class BoardGameController: UIViewController {
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .medium, scale: .large)
         let largeBoldDoc = UIImage(systemName: "arrow.up.arrow.down.circle.fill", withConfiguration: largeConfig)
         button.setImage(largeBoldDoc, for: .normal)
+        button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(allFlipCard), for: .touchUpInside)
         return button
@@ -63,7 +64,6 @@ class BoardGameController: UIViewController {
         view.layer.cornerRadius = 5
         view.backgroundColor = #colorLiteral(red: 0.7059900165, green: 0.9093973041, blue: 0.5270702243, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -86,7 +86,6 @@ class BoardGameController: UIViewController {
         
         setupConstraint()
         view.addSubview(boardGameView)
-        
     }
     
     override func viewDidLoad() {

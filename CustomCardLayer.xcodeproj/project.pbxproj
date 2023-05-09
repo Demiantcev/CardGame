@@ -12,6 +12,7 @@
 		EB63350429E0481300F45136 /* FlippableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350329E0481300F45136 /* FlippableViewProtocol.swift */; };
 		EB63350929E049C300F45136 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350829E049C300F45136 /* CardModel.swift */; };
 		EB63350B29E04B5100F45136 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350A29E04B5100F45136 /* Game.swift */; };
+		EB7DB2192A0A900C00451D10 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */; };
 		EBFDE75929DEBF780041F2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */; };
 		EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */; };
 		EBFDE76229DEBF7A0041F2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFDE76129DEBF7A0041F2E5 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		EB63350329E0481300F45136 /* FlippableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableViewProtocol.swift; sourceTree = "<group>"; };
 		EB63350829E049C300F45136 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		EB63350A29E04B5100F45136 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EBFDE75529DEBF780041F2E5 /* CustomCardLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCardLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6334FF29E0469B00F45136 /* BoardGameController.swift */,
+				EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */,
 				EB328E9229E57C25001BCA0B /* UnfilledCircle.swift in Sources */,
 				EBFDE77129DEC3840041F2E5 /* ShapeLayerProtocol.swift in Sources */,
+				EB7DB2192A0A900C00451D10 /* StartGameViewController.swift in Sources */,
 				EB63350929E049C300F45136 /* CardModel.swift in Sources */,
 				EBFFA1FF29E1788A006AEBC5 /* CardViewFactory.swift in Sources */,
 				EB63350029E0469B00F45136 /* BoardGameController.swift in Sources */,
