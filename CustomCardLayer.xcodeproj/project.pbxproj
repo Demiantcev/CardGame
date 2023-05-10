@@ -13,6 +13,7 @@
 		EB63350929E049C300F45136 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350829E049C300F45136 /* CardModel.swift */; };
 		EB63350B29E04B5100F45136 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB63350A29E04B5100F45136 /* Game.swift */; };
 		EB7DB2192A0A900C00451D10 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */; };
+		EBAD83DF2A0BEDFA002DD24B /* SetupGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD83DE2A0BEDFA002DD24B /* SetupGameViewController.swift */; };
 		EBFDE75929DEBF780041F2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */; };
 		EBFDE75B29DEBF780041F2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */; };
 		EBFDE76229DEBF7A0041F2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFDE76129DEBF7A0041F2E5 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		EB63350829E049C300F45136 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		EB63350A29E04B5100F45136 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		EBAD83DE2A0BEDFA002DD24B /* SetupGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGameViewController.swift; sourceTree = "<group>"; };
 		EBFDE75529DEBF780041F2E5 /* CustomCardLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCardLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFDE75829DEBF780041F2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFDE75A29DEBF780041F2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				EB6334FF29E0469B00F45136 /* BoardGameController.swift */,
 				EB7DB2182A0A900C00451D10 /* StartGameViewController.swift */,
+				EBAD83DE2A0BEDFA002DD24B /* SetupGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				EBFDE77829DEC93D0041F2E5 /* CrossShape.swift in Sources */,
 				EB63350B29E04B5100F45136 /* Game.swift in Sources */,
 				EBFDE77329DEC3C90041F2E5 /* CircleShape.swift in Sources */,
+				EBAD83DF2A0BEDFA002DD24B /* SetupGameViewController.swift in Sources */,
 				EBFDE78229DECF800041F2E5 /* CardView.swift in Sources */,
 				EB63350429E0481300F45136 /* FlippableViewProtocol.swift in Sources */,
 				EBFDE78029DECD020041F2E5 /* BackSideLine.swift in Sources */,

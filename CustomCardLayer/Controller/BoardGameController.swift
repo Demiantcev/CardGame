@@ -86,6 +86,7 @@ class BoardGameController: UIViewController {
         
         setupConstraint()
         view.addSubview(boardGameView)
+        
     }
     
     override func viewDidLoad() {

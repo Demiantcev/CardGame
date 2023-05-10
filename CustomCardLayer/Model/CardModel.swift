@@ -15,15 +15,15 @@ enum CardType: CaseIterable {
     case unfilled
 }
 
-enum CardColor: CaseIterable {
-    case red
-    case green
-    case black
-    case gray
-    case brown
-    case yellow
-    case purple
-    case orange
+enum CardColor: String, CaseIterable {
+    case red = "Красный"
+    case green = "Зеленый"
+    case black = "Черный"
+    case gray = "Серый"
+    case brown = "Коричневый"
+    case yellow = "Желтый"
+    case purple = "Пурпурный"
+    case orange = "Оранжевый"
 }
 
 typealias Card = (type: CardType, color: CardColor)
