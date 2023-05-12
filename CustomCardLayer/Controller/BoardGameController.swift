@@ -11,6 +11,8 @@ class BoardGameController: UIViewController {
     
     var cardsPairsCounts = 8
     var cardsViews = [UIView]()
+    var checkFlip = 0
+    
     private var flippedCards = [UIView]()
     
     lazy var game: Game = getNewGame()
@@ -31,6 +33,8 @@ class BoardGameController: UIViewController {
         game = getNewGame()
         let cards = getCardsBy(modelData: game.cards)
         placeCardsOnBoard(cards)
+//        self.checkFlip = 0
+//        checkLabel.text = String(checkFlip)
     }
     
     lazy var flippedCardButton: UIButton = {
@@ -67,6 +71,13 @@ class BoardGameController: UIViewController {
         return view
     }()
     
+    let checkLabel: UILabel = {
+       var label = UILabel()
+        label.font = UIFont(name: "AvenirNext-Bold", size: 30)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private var cardSize: CGSize {
         CGSize(width: 80, height: 120)
     }
@@ -86,7 +97,6 @@ class BoardGameController: UIViewController {
         
         setupConstraint()
         view.addSubview(boardGameView)
-        
     }
     
     override func viewDidLoad() {
@@ -124,6 +134,8 @@ class BoardGameController: UIViewController {
                     
                     if flippedCard.isFlipped {
                         self.flippedCards.append(flippedCard)
+                        checkFlip = checkFlip + 1
+                        checkLabel.text = String(checkFlip)
                     } else {
                         if let cardIndex = self.flippedCards.firstIndex(of: flippedCard) {
                             self.flippedCards.remove(at: cardIndex)
@@ -168,6 +180,8 @@ class BoardGameController: UIViewController {
             
             boardGameView.addSubview(card)
         }
+        checkFlip = 0
+        checkLabel.text = String(checkFlip)
     }
     
     private func setupConstraint() {
@@ -175,6 +189,7 @@ class BoardGameController: UIViewController {
         self.view.addSubview(startButton)
         self.view.addSubview(boardGameView)
         self.view.addSubview(flippedCardButton)
+        self.view.addSubview(checkLabel)
         
         NSLayoutConstraint.activate([
             
@@ -189,7 +204,11 @@ class BoardGameController: UIViewController {
             boardGameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             
             flippedCardButton.centerYAnchor.constraint(equalTo: startButton.centerYAnchor),
-            flippedCardButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
+            flippedCardButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            
+            checkLabel.topAnchor.constraint(equalTo: startButton.topAnchor),
+            checkLabel.centerYAnchor.constraint(equalTo: startButton.centerYAnchor),
+            checkLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50)
         ])
     }
 }
