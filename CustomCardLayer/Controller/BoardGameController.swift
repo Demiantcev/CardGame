@@ -9,10 +9,9 @@ import UIKit
 
 class BoardGameController: UIViewController {
     
-    var cardsPairsCounts = 8
-    var cardsViews = [UIView]()
+    var cardsPairsCounts = 2
     var checkFlip = 0
-    
+    var cardsViews = [UIView]()
     private var flippedCards = [UIView]()
     
     lazy var game: Game = getNewGame()
@@ -29,16 +28,14 @@ class BoardGameController: UIViewController {
         return button
     }()
     
-    @objc func startGame(_ sender: UIButton) {
+    @objc func startGame() {
         game = getNewGame()
         let cards = getCardsBy(modelData: game.cards)
         placeCardsOnBoard(cards)
-//        self.checkFlip = 0
-//        checkLabel.text = String(checkFlip)
     }
     
     lazy var flippedCardButton: UIButton = {
-       var button = UIButton()
+        var button = UIButton()
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .medium, scale: .large)
         let largeBoldDoc = UIImage(systemName: "arrow.up.arrow.down.circle.fill", withConfiguration: largeConfig)
         button.setImage(largeBoldDoc, for: .normal)
@@ -72,7 +69,7 @@ class BoardGameController: UIViewController {
     }()
     
     let checkLabel: UILabel = {
-       var label = UILabel()
+        var label = UILabel()
         label.font = UIFont(name: "AvenirNext-Bold", size: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -92,7 +89,7 @@ class BoardGameController: UIViewController {
         super.loadView()
         let view = UIView()
         view.backgroundColor = .white
-
+        
         self.view = view
         
         setupConstraint()
@@ -114,6 +111,7 @@ class BoardGameController: UIViewController {
         
         var cardsViews = [UIView]()
         let cardViewFactory = CardViewFactory()
+        var deleteCard = [UIView]()
         
         for (index, modelCard) in modelData.enumerated() {
             let cardOne = cardViewFactory.get(modelCard.type,
@@ -131,9 +129,9 @@ class BoardGameController: UIViewController {
             for card in cardsViews {
                 (card as! FlippableView).flipCompletionHandler = {[self] flippedCard in
                     flippedCard.superview?.bringSubviewToFront(flippedCard)
-                    
                     if flippedCard.isFlipped {
                         self.flippedCards.append(flippedCard)
+                        
                         checkFlip = checkFlip + 1
                         checkLabel.text = String(checkFlip)
                     } else {
@@ -153,6 +151,12 @@ class BoardGameController: UIViewController {
                                 self.flippedCards.first!.removeFromSuperview()
                                 self.flippedCards.last!.removeFromSuperview()
                                 self.flippedCards = []
+                                // Добавляю отгаданные карты в массив
+                                deleteCard.append(cardOne)
+                                deleteCard.append(cardTwo)
+                                if deleteCard.count == cardsViews.count {
+                                    self.alertResults()
+                                }
                             })
                         } else {
                             for card in self.flippedCards {
@@ -210,6 +214,21 @@ class BoardGameController: UIViewController {
             checkLabel.centerYAnchor.constraint(equalTo: startButton.centerYAnchor),
             checkLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50)
         ])
+    }
+}
+extension BoardGameController {
+    
+    private func alertResults() {
+        let alert = UIAlertController(title: "Итоговый счет: \(self.checkLabel.text!)", message: "Начать новую игру?", preferredStyle: .alert)
+        let actionNewGame = UIAlertAction(title: "Новая игра", style: .default) {_ in
+            self.startGame()
+        }
+        let actionCancel = UIAlertAction(title: "Выйти", style: .destructive) {_ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(actionNewGame)
+        alert.addAction(actionCancel)
+        self.present(alert, animated: true)
     }
 }
 
